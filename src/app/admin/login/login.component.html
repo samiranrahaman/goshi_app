@@ -1,0 +1,28 @@
+<div class="login_container">
+			<div class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+			</div>
+			<div class="login_form">
+				<p class="m-0 p-5">Sign in to your account</p>
+				 <form (ngSubmit)="login()" #loginForm="ngForm">
+					<div class="form-group mt-15">
+					   <input type="text" class="form-control" [(ngModel)]="logindata.username" name="username"   placeholder="User Name" required>
+						
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" [(ngModel)]="logindata.password" name="password"   placeholder="Password" required>
+						
+						<a href="#" class="forgetpassword">Forget Password</a>
+					</div>
+					<div class="form-group text-c">
+					<button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Save</button>
+					<!--<button type="submit" class="btn btn-primary signin">Signin</button>-->
+					</div>
+				</form>
+			</div>
+		</div>
